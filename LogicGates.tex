@@ -1,0 +1,171 @@
+\documentclass{beamer}
+
+\usepackage{circuitikz}
+\usepackage{enumerate}
+\usepackage[UKenglish]{datetime}
+\usetheme{Warsaw}
+
+\title{Logic gates}
+\author{matiwa}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Logic gate}
+A structural element of machines and mechanisms (today usually: an integrated circuit, although similar functions can also be performed using other technical solutions, e.g. hydraulics or pneumatics), physically implementing a simple logical function, the arguments of which (logical variables) and the function itself may assume one with two values, e.g. 0 or 1.[1]
+\end{frame}
+
+\begin{frame}
+\frametitle{The basic logical elements}
+The basic logical elements commonly used in the construction of logical systems are elements that perform logical functions: sum (alternatives), product (conjunction) and negation. These are OR, AND and NOT gates, respectively. With the help of two such gates (OR and NOT or AND and NOT) you can build a system that performs any logical function, such systems are called complete systems.[1]
+\end{frame}
+
+\begin{frame}
+\frametitle{The basic logical elements}
+\begin{itemize}
+\item NAND (conjunction negation) and NOR (negation of logical sum) gates are functionally called full gates, because with their use (i.e. NAND only or NOR only) you can build a circuit that performs any logical function.
+\item Another frequently used logic gate is XOR, which is used in arithmetic systems such as adders and subtractors.
+\end{itemize}[1]
+\end{frame}
+
+\begin{frame}
+\frametitle{Types of logic gates}
+\begin{enumerate}
+\item NOT
+\item AND
+\item NAND (-AND)
+\item OR
+\item NOR
+\item XOR (NEQ)
+\item XNOR
+\item Tristate
+\end{enumerate}[1]
+\end{frame}
+
+\begin{frame}
+\frametitle{NOT}
+\centering
+\begin{circuitikz}\draw
+(0,0) node[not port]{};
+\end{circuitikz}\newline
+Symbol of the NOT logic gate\newline \newline
+\begin{tabular}{|c|c|}
+\hline A&Q\\
+\hline 0&1\\
+\hline 1&0\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{AND}
+\centering
+\begin{circuitikz}\draw
+(0,0) node[and port]{};
+\end{circuitikz}\newline
+Symbol of the AND logic gate\newline \newline
+\begin{tabular}{|c|c|c|}
+\hline p&q&x\\
+\hline 0&0&0\\
+\hline 0&1&0\\
+\hline 1&0&0\\
+\hline 1&1&1\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{NAND (-AND)}
+\centering
+\begin{circuitikz}\draw
+(0,0) node[nand port]{};
+\end{circuitikz}\newline
+Symbol of the NAND logic gate\newline \newline
+\begin{tabular}{|c|c|c|}
+\hline p&q&x\\
+\hline 0&0&1\\
+\hline 0&1&1\\
+\hline 1&0&1\\
+\hline 1&1&0\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{OR}
+\centering
+\begin{circuitikz}\draw
+(0,0) node[or port]{};
+\end{circuitikz}\newline
+Symbol of the OR logic gate\newline \newline
+\begin{tabular}{|c|c|c|}
+\hline p&q&x\\
+\hline 0&0&0\\
+\hline 0&1&1\\
+\hline 1&0&1\\
+\hline 1&1&1\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{NOR}
+\centering
+\begin{circuitikz}\draw
+(0,0) node[nor port]{};
+\end{circuitikz}\newline
+Symbol of the NOR logic gate\newline \newline
+\begin{tabular}{|c|c|c|}
+\hline p&q&x\\
+\hline 0&0&1\\
+\hline 0&1&0\\
+\hline 1&0&0\\
+\hline 1&1&0\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{XOR}
+\centering
+\begin{circuitikz}\draw
+(0,0) node[xor port]{};
+\end{circuitikz}\newline
+Symbol of the XOR logic gate\newline \newline
+\begin{tabular}{|c|c|c|}
+\hline p&q&x\\
+\hline 0&0&0\\
+\hline 0&1&1\\
+\hline 1&0&1\\
+\hline 1&1&0\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{XNOR}
+\centering
+\begin{circuitikz}\draw
+(0,0) node[xnor port]{};
+\end{circuitikz}\newline
+Symbol of the XNOR logic gate\newline \newline
+\begin{tabular}{|c|c|c|}
+\hline p&q&x\\
+\hline 0&0&1\\
+\hline 0&1&0\\
+\hline 1&0&0\\
+\hline 1&1&1\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bibliography}
+\begin{enumerate}
+\item https://pl.wikipedia.org/wiki/Bramka\_logiczna
+\end{enumerate}
+\end{frame}
+\end{document}
